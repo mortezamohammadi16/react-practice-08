@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+    --primary-color: #6C63FF;
+    --border-color-search: #6C63FF;
+}
