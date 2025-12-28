@@ -11,15 +11,14 @@ const TodoInput = ({value, onChange, onAdd}) => {
             placeholder='write your next task' value={value} onChange={onChange} >
                 
             </input>
-            <button type='submit' className='bg-[#6C63FF] p-2 rounded-[5px] text-white' onSubmit={onAdd}>save</button>
+            <button type='submit' className='bg-[#6C63FF] p-2 rounded-[5px] text-white' onClick={onAdd}>save</button>
             <div className='flex justify-center gap-1'>
 
-            <select className='border-[1px] border-[#6C63FF] p-2 rounded-[5px] text-[#6C63FF]'>
+            {/* <select className='border-[1px] border-[#6C63FF] p-2 rounded-[5px] text-[#6C63FF]'>
                 <option value="all"> All</option>
                 <option value="all"> Done</option>
-            </select>
+            </select> */}
 
-            {/* <button type='button' className='bg-[#bcb9fe] p-2 rounded-[5px]'><img src={moon}></img></button> */}
             </div>
         </div>
 

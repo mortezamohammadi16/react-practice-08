@@ -20,6 +20,16 @@ function App() {
     setTask('')
   }
 
+  const toggelTodoDone = (id) =>{
+    setTodos(prev =>prev.map(
+      todo => todo.id === id ? {...todo, done: !todo.done} : todo
+    ))
+  }
+
+  const deleteTodo = (id)=>{
+    setTodos(prev => prev.filter(todo =>todo.id !== id))
+  }
+
 
 
   return (
@@ -30,7 +40,11 @@ function App() {
       onChange ={(e)=>setTask(e.target.value)}
       onAdd = {handelAddTodo}
      />
-     <Card />
+     <Card 
+     todos ={todos}
+     onToggle = {toggelTodoDone}
+     onDelete = {deleteTodo}
+     />
     </>
   )
 }
